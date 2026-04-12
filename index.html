@@ -3,33 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universal Coffe - A Cafeteria Espacial</title>
+    <title>Café Espacial | Universal Coffee</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>☕ Universal Coffe</h1>
-        <p>Um momento de pausa e hospitalidade, em qualquer lugar da galáxia.</p>
+    <nav>
+        <div class="logo">🚀 Café Espacial</div>
+        <ul>
+            <li><a href="#sobre">O Jogo</a></li>
+            <li><a href="#barista">O Barista</a></li>
+            <li><a href="#interacao">Laboratório</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Bem-vindo ao Café Espacial</h1>
+        <p>O refúgio mais acolhedor de toda a galáxia. Sente-se, relaxe e peça sua poção.</p>
+        <a href="#interacao" class="btn-primario">Fazer um Pedido</a>
     </header>
 
     <main>
-        <section id="sobre-o-jogo">
-            <h2>O Seu Novo Refúgio Espacial</h2>
-            <p>Em um universo que gira rápido demais, nós construímos um balcão de madeira onde o tempo passa no seu próprio ritmo. Assuma o papel de um barista intergaláctico, receba viajantes de todas as partes do cosmos e prepare a poção perfeita para cada um deles.</p>
+        <section id="sobre" class="container">
+            <h2>Sobre o Jogo</h2>
+            <p>Em <strong>Universal Coffee</strong>, você não está sob a pressão de combates ou cronômetros estressantes. Assim como os clássicos <em>cozy games</em> de simulação, este é um espaço de meditação e tranquilidade. Misture ingredientes cósmicos, sirva viajantes intergalácticos e crie um ambiente de pura química social.</p>
         </section>
 
-        <section id="persona">
-            <h2>Feito para Desacelerar</h2>
-            <p>Esqueça os cliques frenéticos. Nossa mecânica traz a sensação tátil de preparar e entregar a bebida com as próprias mãos no nosso balcão de madeira rústica. Sem "Game Over" punitivo, apenas você, seus clientes e uma boa trilha sonora de Jazz ao fundo.</p>
+        <section id="barista" class="container bg-escuro">
+            <h2>Conheça seu Barista: Lucas</h2>
+            <div class="barista-perfil">
+                <div class="barista-texto">
+                    <p>Inspirado em <strong>Lucas</strong>, um Barista Sênior de 24 anos que é a alma deste projeto. Ele é o ponto de calma em um universo rápido e barulhento.</p>
+                    <ul>
+                        <li>🪵 <strong>Marcenaria:</strong> O balcão de madeira que você vê no jogo foi desenhado e lixado à mão por ele.</li>
+                        <li>🎵 <strong>Análogo no Digital:</strong> O som ambiente da nossa cafeteria vem direto da sua coleção de discos de vinil de Jazz e MPB.</li>
+                        <li>☕ <strong>Empatia:</strong> Ele não apenas tira cafés, ele ouve. Lucas sabe exatamente qual poção curativa seu coração alienígena precisa hoje.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="interacao">
-            <h2>Sinta a Química Social</h2>
-            <p>Faça um teste prático e sinta a satisfação de um cliente bem atendido:</p>
-            <button id="btn-misturar">Atender Cliente 🧪</button>
-            <p id="resultado-mistura"></p>
+        <section id="interacao" class="container">
+            <h2>Laboratório de Misturas 🧪</h2>
+            <p>Teste suas habilidades! O que acontece quando misturamos os ingredientes da bancada?</p>
+            <button id="btn-misturar" class="btn-secundario">Misturar Ingredientes Cósmicos</button>
+            <div id="resultado-mistura" class="resultado-box">Clique no botão para criar uma bebida...</div>
+        </section>
+
+        <section id="avaliacoes" class="container bg-escuro">
+            <h2>Avaliações Intergalácticas ⭐</h2>
+            <div class="cards-avaliacoes">
+                <div class="card">
+                    <p class="estrelas">⭐⭐⭐⭐⭐</p>
+                    <p>"O Lucas sempre lembra do meu pedido de Xarope de Plutão com Pó de Diamante. Melhor ouvinte da Via Láctea!"</p>
+                    <p class="autor">- Zorg, Planeta X</p>
+                </div>
+                <div class="card">
+                    <p class="estrelas">⭐⭐⭐⭐⭐</p>
+                    <p>"Amei a textura do balcão de madeira e o Jazz tocando ao fundo. Um verdadeiro 'cozy game' na vida real."</p>
+                    <p class="autor">- Comandante Ripley</p>
+                </div>
+            </div>
+
+            <div class="form-avaliacao">
+                <h3>Deixe sua Avaliação</h3>
+                <form id="form-review">
+                    <input type="text" id="nome-cliente" placeholder="Seu Nome/Espécie" required>
+                    <textarea id="texto-review" rows="3" placeholder="Como foi sua experiência no Café Espacial?" required></textarea>
+                    <button type="submit" class="btn-primario">Enviar Avaliação</button>
+                </form>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Universal Coffee - Tech Academy 1º Período.</p>
+        <p>Desenvolvido com café, vinil e código.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
