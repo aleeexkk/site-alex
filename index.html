@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="overlay-idade" class="overlay-idade" role="dialog" aria-modal="true" aria-labelledby="idade-titulo">
+        <div class="overlay-idade__card">
+            <h2 id="idade-titulo">Verificação de idade</h2>
+            <p class="overlay-idade__texto" id="overlay-idade__intro">Bem-vindo ao Café Espacial. Informe sua idade para continuar.</p>
+            <form id="form-idade" class="form-idade">
+                <label for="input-idade">Sua idade</label>
+                <input type="number" id="input-idade" name="idade" min="0" max="120" inputmode="numeric" placeholder="Ex.: 18" required autocomplete="off">
+                <button type="submit" class="btn-primario">Entrar no site</button>
+            </form>
+            <p id="idade-erro" class="idade-erro" hidden></p>
+        </div>
+    </div>
+
     <nav>
         <div class="logo">🚀 Café Espacial</div>
         <ul>
