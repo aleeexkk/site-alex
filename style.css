@@ -21,6 +21,76 @@ body {
     line-height: 1.6;
 }
 
+body.body--idade-bloqueada {
+    overflow: hidden;
+}
+
+/* Verificação de idade */
+.overlay-idade {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: radial-gradient(circle at 50% 30%, rgba(31, 40, 51, 0.98) 0%, rgba(11, 12, 16, 0.97) 55%, #0b0c10 100%);
+    border-bottom: 1px solid var(--destaque-escuro);
+}
+
+.overlay-idade.overlay-idade--fechado {
+    display: none;
+}
+
+.overlay-idade__card {
+    width: 100%;
+    max-width: 420px;
+    padding: 36px 28px;
+    background-color: var(--bg-secundario);
+    border-radius: 16px;
+    border: 1px solid var(--destaque-escuro);
+    box-shadow: 0 0 40px rgba(102, 252, 241, 0.12);
+    text-align: center;
+}
+
+.overlay-idade__card h2 {
+    margin-bottom: 12px;
+}
+
+.overlay-idade__texto {
+    margin-bottom: 22px;
+    font-size: 1rem;
+    color: var(--texto-principal);
+}
+
+.form-idade {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.form-idade label {
+    font-weight: 600;
+    color: var(--destaque-cyan);
+}
+
+.form-idade .btn-primario {
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.idade-erro {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: rgba(180, 50, 50, 0.2);
+    border: 1px solid rgba(220, 80, 80, 0.5);
+    color: #f5b5b5;
+    font-size: 0.95rem;
+}
+
 /* Navegação */
 nav {
     display: flex;
